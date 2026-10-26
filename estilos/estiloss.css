@@ -1,0 +1,175 @@
+
+.hero-carrusel { position: relative; overflow: hidden; }
+
+.carrusel-fondo { position: absolute; inset: 0; z-index: 0; }
+.carrusel-fondo .carousel-inner,
+.carrusel-fondo .carousel-item { height: 100%; }
+.carrusel-fondo .carousel-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+
+
+/* ===== Botón flotante de WhatsApp ===== */
+.btn-whatsapp {
+  position: fixed; bottom: 20px; right: 20px; z-index: 1000;
+  width: 60px; height: 60px; border-radius: 50%;
+  background-color: #25d366; color: #fff;
+  font-size: 32px; text-decoration: none;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: pulso-wsp 2s infinite;
+}
+.btn-whatsapp:hover { background-color: #1ebe5a; color: #fff; }
+
+@keyframes pulso-wsp {
+  0%   { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+  70%  { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+
+.contenido-hero h1,
+.contenido-hero p {
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.20);
+}
+
+.carrusel-fondo::after {
+  content: ""; position: absolute; inset: 0; pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.55));
+}
+.contenido-hero { position: relative; z-index: 1; }
+
+
+.paso-numero {
+  width: 56px; height: 56px; border-radius: 50%;
+  background-color: var(--naranja); color: #fff;
+  font-size: 1.5rem; font-weight: bold;
+  display: flex; align-items: center; justify-content: center;
+}
+.paso { transition: transform 0.2s; }
+.paso:hover { transform: translateY(-6px); }
+
+
+
+.sector {
+  border-bottom: 4px solid transparent;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.sector:hover {
+  transform: translateY(-6px);
+  border-bottom-color: var(--naranja);
+}
+
+
+body {
+        font-family: Arial, sans-serif;
+        background-color: #ffffff;
+      }
+
+      .menu li:hover > .submenu,
+      .menu li:focus-within > .submenu {
+        display: block;
+      }
+      .barra {
+        width: 100%;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        padding: 25px 10px;
+        box-shadow: 0 3px 8px #cccccc;
+      }
+
+      .menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 35px;
+        list-style: none;
+      }
+      .menu > li {
+        position: relative;
+      }
+      .menu > li > a {
+        display: block;
+        padding: 15px 10px;
+        color: #222222;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bold;
+      }
+      .menu > li > a:hover {
+        color:  #f26b0f;
+      }
+
+  .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 230px;
+        background-color: #000;
+        list-style: none;
+        box-shadow: 0 5px 12px #f26b0f;
+        border-top: 4px solid ;
+        z-index: 100;
+      }
+      .submenu a {
+        display: block;
+        padding: 16px;
+        color: #fffcfc;
+        text-decoration: none;
+        font-size: 19px;
+        border-bottom: 1px solid  #f26b0f;
+      }
+      .submenu a:hover {
+        background-color: #f26b0f;
+        color: #feffff;
+      }
+
+:root { --azul: #000000; --naranja: #f26b0f; }
+
+.bg-azul      { background-color: var(--azul) !important; }
+.text-azul    { color: var(--azul) !important; }
+.bg-naranja   { background-color: var(--naranja) !important; }
+.text-naranja { color: var(--naranja) !important; }
+
+.btn-naranja { background-color: var(--naranja); color: #fff; font-weight: 600; border: none; }
+.btn-naranja:hover { background-color: #0b0b0b; color: #fff; }
+
+.nav-link.active { color: var(--naranja) !important; }
+.border-naranja { border-color: var(--naranja) !important; }
+.accordion-button:not(.collapsed) { background-color: #fff1e6; color: var(--azul); }
+
+
+/* ===== Franja de derechos reservados ===== */
+.footer-inferior {
+  background-color: #0b0b0b;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+
+/* ===== Espacio reservado para imagen (reemplazar por <img>) ===== */
+.espacio-imagen {
+  width: 100%; max-width: 120px; aspect-ratio: 1 / 1;
+  border: 2px dashed var(--naranja); border-radius: 8px;
+  background-color: #fff7f0; color: #8a4a12;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; text-align: center;
+}
+.espacio-imagen.grande { max-width: 100%; aspect-ratio: 4 / 3; }
+
+/* submenús con textos más largos */
+.menu .submenu { width: 280px; padding-left: 0; }
+
+
+/* ===== Iconos de sectores ===== */
+.icono-sector {
+  width: 90px; height: 90px; border-radius: 50%;
+  background-color: #fff1e6; color: var(--naranja);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 2.6rem;
+  transition: background-color 0.2s, color 0.2s;
+}
+.sector:hover .icono-sector { background-color: var(--naranja); color: #fff; }
